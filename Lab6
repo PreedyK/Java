@@ -21,7 +21,7 @@ public class SchoolFee extends JFrame implements ActionListener {
         layoutConst = new GridBagConstraints();
         layoutConst.gridx = 0;
         layoutConst.gridy = 0;
-        add(new JLabel("Enter fee:"), layoutConst);
+        add(new JLabel("Enter the fee to be paid:"), layoutConst);
 
         layoutConst = new GridBagConstraints();
         layoutConst.gridx = 1;
@@ -31,7 +31,7 @@ public class SchoolFee extends JFrame implements ActionListener {
         layoutConst = new GridBagConstraints();
         layoutConst.gridx = 0;
         layoutConst.gridy = 1;
-        add(new JLabel("Before deadline? (yes/no)"), layoutConst);
+        add(new JLabel("Are you paying before the deadline?"), layoutConst);
 
         layoutConst = new GridBagConstraints();
         layoutConst.gridx = 1;
@@ -55,9 +55,9 @@ public class SchoolFee extends JFrame implements ActionListener {
         String deadline = deadlineEntryField.getText().toLowerCase();
 
         if (deadline.equals("yes")) {
-            endMessage.setText("On time! No extra fee.");
+            endMessage.setText("Congratulations, your payment is done!");
         } else if (deadline.equals("no")) {
-            endMessage.setText("Late! Add $10 fine.");
+            endMessage.setText("Please pay $10 fine along with your school fee!");
         } else {
             endMessage.setText("Enter yes or no.");
         }
